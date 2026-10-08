@@ -47,3 +47,32 @@
 @keyframes venueScroll{from{transform:translateY(70px) scale(.92);filter:blur(5px)}to{transform:none;filter:none}}
 @keyframes cardRise{from{opacity:.1;transform:translateY(80px) rotateX(8deg)}to{opacity:1;transform:none}}
 @keyframes historySlide{from{opacity:.1;transform:translateX(60px)}to{opacity:1;transform:none}}
+
+/* 3D-first cinematic home */
+.customer-hero{perspective:1400px;perspective-origin:50% 45%;transform-style:preserve-3d}
+.hero-atmosphere{transform-style:preserve-3d;will-change:transform}
+.hero-columns{transform-style:preserve-3d;transform:translate3d(calc(var(--mx,0)*-28px),calc(var(--my,0)*-18px),40px) perspective(900px) rotateY(-12deg) scale(1.25);animation:architectureDrift 12s ease-in-out infinite alternate}
+.hero-light.a{transform:translate3d(calc(var(--mx,0)*-45px),calc(var(--my,0)*-30px),110px)}
+.hero-light.b{transform:translate3d(calc(var(--mx,0)*30px),calc(var(--my,0)*20px),-40px)}
+.hero-floor{transform:translateZ(-80px) perspective(500px) rotateX(62deg) scale(1.2)}
+.hero-object{transform-style:preserve-3d;transform:translate3d(calc(var(--mx,0)*-55px),calc(var(--my,0)*-35px),170px) rotateY(calc(var(--mx,0)*-12deg)) rotateX(calc(var(--my,0)*8deg));transition:transform .18s ease-out,box-shadow .5s;animation:heroObject3D 6s ease-in-out infinite}
+.hero-object:before,.hero-object:after{content:"";position:absolute;inset:-35px;border:1px solid #c9a45c20;border-radius:inherit;transform:translateZ(-35px) rotateZ(8deg);animation:ring3D 8s linear infinite;pointer-events:none}.hero-object:after{inset:-65px;transform:translateZ(-70px) rotateZ(-12deg);opacity:.45;animation-duration:12s}
+.hero-copy{transform:translate3d(calc(var(--mx,0)*-12px),calc(var(--my,0)*-8px),220px);transform-style:preserve-3d;text-shadow:0 20px 50px #0008;will-change:transform}
+.customer-nav{transform:translateZ(250px);transform-style:preserve-3d}
+.layout-switcher{transform:translate3d(calc(var(--mx,0)*-10px),calc(var(--my,0)*-6px),180px)}
+.scroll-cue{transform:translateZ(130px)}
+.venue-motion{perspective:1000px;transform-style:preserve-3d}
+.venue-motion>div{transform-style:preserve-3d}
+.v-back{transform:translateZ(-90px) scale(1.15)}.v-mid{transform:translateZ(20px) scale(1.08)}.v-front{transform:translateZ(110px) scale(1.02)}
+.venue-motion:hover .v-back{transform:translateZ(-90px) scale(1.25) translateX(-20px)}.venue-motion:hover .v-mid{transform:translateZ(30px) scale(1.2) translateX(20px)}.venue-motion:hover .v-front{transform:translateZ(150px) scale(1.06)}
+.customer-service-grid{perspective:1200px}.customer-service-grid button{transform-style:preserve-3d;box-shadow:0 25px 50px #0003}.customer-service-grid button:hover{transform:translateY(-14px) rotateX(4deg) rotateY(-3deg) translateZ(35px)}
+.journey{perspective:1100px}.journey button{transform-style:preserve-3d}.journey button:hover{transform:translateY(-12px) rotateX(5deg) translateZ(25px);box-shadow:0 25px 45px #18212f22}
+.history-rail{perspective:1000px}.history-rail article{transform-style:preserve-3d}.history-rail article:hover{transform:translateZ(35px) rotateY(-2deg);box-shadow:0 20px 45px #18212f10}
+@keyframes heroObject3D{0%,100%{margin-top:0;filter:drop-shadow(0 30px 45px #0008)}50%{margin-top:-18px;filter:drop-shadow(0 50px 65px #0009)}}
+@keyframes ring3D{to{transform:translateZ(-35px) rotateZ(368deg)}}
+@keyframes architectureDrift{0%{transform:translate3d(-2%,0,20px) perspective(900px) rotateY(-12deg) scale(1.2)}100%{transform:translate3d(2%,-2%,70px) perspective(900px) rotateY(-5deg) scale(1.28)}}
+@supports(animation-timeline:view()){.customer-service-grid button{animation:card3D linear both;animation-timeline:view();animation-range:entry 0% cover 45%}.venue-motion{animation:venue3D linear both;animation-timeline:view();animation-range:entry 0% cover 65%}}
+@keyframes card3D{from{opacity:.1;transform:translateY(100px) translateZ(-120px) rotateX(12deg)}to{opacity:1;transform:translateY(0) translateZ(0) rotateX(0)}}
+@keyframes venue3D{from{opacity:.2;transform:scale(.82) rotateX(8deg) translateY(80px)}to{opacity:1;transform:scale(1) rotateX(0) translateY(0)}}
+@media(max-width:600px){.customer-hero{perspective:900px}.hero-copy{transform:translate3d(0,calc(var(--my,0)*-4px),120px)}.hero-object{transform:translate3d(0,calc(var(--my,0)*-15px),90px)}.hero-columns{transform:perspective(700px) rotateY(-8deg) scale(1.15)}.venue-motion{perspective:700px}.customer-service-grid button:hover,.journey button:hover{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.hero-object,.hero-columns,.hero-copy,.hero-light,.customer-nav,.layout-switcher{transform:none;animation:none}.venue-motion,.customer-service-grid button{animation:none}}
