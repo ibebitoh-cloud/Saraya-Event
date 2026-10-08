@@ -339,3 +339,18 @@
  .customer-home .planner-step{grid-template-columns:40px 1fr;gap:10px}
  .customer-home .planner-step>.planner-options,.customer-home .planner-step>.guest-control{grid-column:2}
 }
+
+/* Desktop 3D studio: keep every model visible side-by-side */
+@media(min-width:901px){
+ .customer-home .model-stage{display:grid!important;grid-template-columns:minmax(0,1.65fr) minmax(320px,.85fr)!important;gap:28px!important;align-items:stretch!important}
+ .customer-home .model-card.large{min-width:0!important;height:560px!important}
+ .customer-home .model-stack{min-width:0!important;display:flex!important;flex-direction:column!important;gap:18px!important}
+ .customer-home .model-stack .model-card{height:460px!important;min-height:0!important}
+ .customer-home .model-card model-viewer{width:100%!important;height:100%!important;min-height:0!important}
+ .customer-home .model-caption{z-index:3!important}
+ .customer-home .model-specs{margin-top:auto!important}
+}
+@media(max-width:900px){
+ .customer-home .model-stage{grid-template-columns:1fr!important}
+ .customer-home .model-card.large,.customer-home .model-stack .model-card{height:430px!important}
+}
