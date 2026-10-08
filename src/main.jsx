@@ -46,14 +46,14 @@ function LayoutCells({layout,setLayout}){return <div className="layout-cells" ar
 function Home({login,lang,onToggleLang}){const[scene,setScene]=useState('wedding');const[layout,setLayout]=useState(1);const S=sceneData[scene].icon;const current=homeLayouts[layout-1];return <div className="landing">
  <div className={'home-layout '+current.className}>
   <SceneVisual scene={scene} layout={layout}/><div className="scene-vignette"/>
-  <div className="landing-nav"><div className="landing-brand"><b>S</b><div><strong>SARAYA</strong><small>EVENT MANAGEMENT</small></div></div><div className="nav-center">{['VENUES','EVENTS','SERVICES','GALLERY'].map(x=><span key={x}>{x}</span>)}</div><div className="home-tools"><button type="button" className="language-toggle" onClick={onToggleLang}>{lang==='ar'?'العربية ↔ EN':'EN ↔ العربية'}</button><button className="login-btn" onClick={login}><LogIn/>تسجيل الدخول</button></div></div>
+  <div className="landing-nav"><div className="landing-brand"><b>S</b><div><strong>SARAYA</strong><small>EVENT MANAGEMENT</small></div></div><div className="nav-center">{(lang==='ar'?['القاعات','الفعاليات','الخدمات','المعرض']:['VENUES','EVENTS','SERVICES','GALLERY']).map(x=><span key={x}>{x}</span>)}</div><div className="home-tools"><button type="button" className="language-toggle" onClick={onToggleLang}>{lang==='ar'?'العربية ↔ EN':'EN ↔ العربية'}</button><button className="login-btn" onClick={login}><LogIn/>تسجيل الدخول</button></div></div>
   <div className="layout-counter"><span>LAYOUT</span><strong>0{layout}</strong><small>/ 04</small></div>
   <div className="landing-content"><div className="eyebrow"><S/> {sceneData[scene].label} <i/> {current.tag}</div><h1>{current.title}</h1><p>{current.desc}</p>
    <div className="scene-switch">{Object.entries(sceneData).map(([k,v])=><button className={scene===k?'selected':''} onClick={()=>setScene(k)} key={k}>{v.label}</button>)}</div>
-   <div className="hero-actions"><button className="hero-login" onClick={login}>اكتشف السرايا <ArrowLeft/></button><span>Demo Experience · Motion First</span></div>
+   <div className="hero-actions"><button className="hero-login" onClick={login}>{lang==='ar'?'اكتشف السرايا':'Discover Saraya'} <ArrowLeft/></button><span>{lang==='ar'?'تجربة تجريبية · الحركة أولاً':'Demo Experience · Motion First'}</span></div>
   </div>
-  <div className="layout-swipe"><span>SWIPE LAYOUTS</span><LayoutCells layout={layout} setLayout={setLayout}/></div>
-  <div className="camera-status"><span className="rec"/><Camera/> MOTION EXPERIENCE <b>4K</b></div>
+  <div className="layout-swipe"><span>{lang==='ar'?'اسحب للتصاميم':'SWIPE LAYOUTS'}</span><LayoutCells layout={layout} setLayout={setLayout}/></div>
+  <div className="camera-status"><span className="rec"/><Camera/> {lang==='ar'?'تجربة حركية':'MOTION EXPERIENCE'} <b>4K</b></div>
  </div>
  <OrgMatrix/>
  </div>}
