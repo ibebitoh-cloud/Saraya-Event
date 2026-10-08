@@ -24,3 +24,18 @@
 @media(max-width:900px){.customer-nav nav{display:none}.hero-copy{left:7vw;right:7vw;max-width:none;top:20%}.hero-copy h1{font-size:47px}.hero-index{right:auto;left:0;top:-45px}.hero-object{left:5%;bottom:13%;transform:scale(.75)}.section-head{grid-template-columns:1fr;gap:18px}.customer-service-grid{grid-template-columns:1fr 1fr}.journey{grid-template-columns:1fr 1fr}.customer-contact{display:block}.customer-contact>div:last-child{margin-top:25px}.layout-switcher{right:6vw}}
 @media(max-width:600px){.customer-hero{min-height:720px}.customer-nav{padding:16px 5vw}.customer-logo small{display:none}.customer-nav-actions .language-toggle{font-size:9px;padding:8px}.staff-link{font-size:0;width:38px;height:38px;padding:0}.hero-copy{top:19%}.hero-copy h1{font-size:40px;letter-spacing:-2px}.hero-copy>p{font-size:13px}.scene-buttons button{font-size:9px;padding:7px 9px}.hero-object{width:120px;height:120px;left:-2%;bottom:13%}.hero-object svg{width:55px}.layout-switcher button{width:42px;height:42px}.layout-switcher>span{display:none}.scroll-cue{left:5vw;bottom:95px}.customer-section{padding:75px 6vw}.customer-service-grid,.journey{grid-template-columns:1fr}.venue-motion{height:300px}.v-front strong{font-size:48px}.history-rail article{grid-template-columns:65px 1fr;gap:12px}.customer-contact{padding:75px 6vw}.customer-footer>button{margin-left:0}.inquiry-form{grid-template-columns:1fr}.full-field{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.customer-home *{animation:none!important;transition:none!important}}
+
+/* Scroll motion ideas: reveal, depth, marquee, floating type */
+.motion-reveal{opacity:0;transform:translateY(70px) scale(.97);transition:opacity .9s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.motion-reveal.is-visible{opacity:1;transform:none}
+.motion-depth{transform:translate3d(calc(var(--mx,0) * -10px),calc(var(--scroll,0px) * -.08 + var(--my,0) * -7px),0) scale(1.04);transition:transform .18s ease-out}
+.motion-marquee{height:64px;overflow:hidden;background:#c9a45c;color:#111827;display:flex;align-items:center;gap:55px;white-space:nowrap;font-size:clamp(18px,2.5vw,34px);font-weight:800;letter-spacing:2px;transform:rotate(-1.5deg) scale(1.03);position:relative;z-index:3}
+.motion-marquee span{animation:marqueeSaraya 24s linear infinite;display:inline-block;min-width:max-content}
+.floating-scroll-word{position:absolute;right:-2vw;margin-top:20px;font-size:clamp(70px,14vw,190px);font-weight:800;letter-spacing:-8px;color:#18212f08;white-space:nowrap;pointer-events:none;transform:translateX(calc(var(--scroll,0px) * -.12));transition:transform .15s linear}
+.customer-section{position:relative}
+.customer-service-grid button:nth-child(2n){transition-delay:.08s}.customer-service-grid button:nth-child(3n){transition-delay:.16s}
+.history-rail article:nth-child(2n){transform:translateX(18px)}.history-rail article:nth-child(2n):hover{transform:translateX(0)}
+.venue-motion,.customer-service-grid button,.journey button,.history-rail article{will-change:transform}
+@keyframes marqueeSaraya{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(max-width:600px){.motion-marquee{height:52px;font-size:15px}.motion-depth{transform:translate3d(0,calc(var(--scroll,0px) * -.05),0) scale(1.02)}.floating-scroll-word{font-size:80px}}
+@media(prefers-reduced-motion:reduce){.motion-reveal{opacity:1;transform:none}.motion-marquee span{animation:none}.motion-depth,.floating-scroll-word{transform:none}}
