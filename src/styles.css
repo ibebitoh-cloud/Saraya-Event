@@ -293,3 +293,49 @@
 .customer-home.mono-black .customer-footer{border-color:#111}
 @media(max-width:900px){.customer-home .hero-atmosphere:after{inset:16% 4% 12% 28%}.customer-home .hero-object{right:5vw;width:42vw!important;height:48vh!important}.customer-home .hero-copy{top:23%!important;left:6vw!important;right:6vw!important;max-width:650px!important}}
 @media(max-width:600px){.customer-home .customer-nav nav{display:none}.customer-home .customer-nav{padding:15px 18px}.customer-home .hero-atmosphere:after{inset:15% 5% 20% 12%;transform:skewX(-5deg)}.customer-home .hero-object{right:8%;bottom:8%;width:190px!important;height:260px!important}.customer-home .hero-copy{top:20%!important;left:6vw!important;right:6vw!important}.customer-home .hero-copy h1{font-size:48px!important;letter-spacing:-2px!important}.customer-home .hero-copy>p{font-size:12px;max-width:330px}.customer-home .scene-buttons{display:none}.customer-home .mono-toggle{padding:0 7px}.customer-home .staff-link{font-size:0;width:34px;padding:0}.customer-home .layout-switcher{bottom:18px}.customer-home .layout-switcher small{display:none}.customer-home .layout-switcher button{width:42px!important;height:42px!important}.customer-home .scroll-cue{bottom:75px}}
+
+/* Saraya event planning — editorial concierge */
+.customer-home .event-planner-section{background:#f7f7f5!important;color:#111!important;padding-top:110px;padding-bottom:110px}
+.customer-home .planner-intro{display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:end;border-bottom:1px solid #111;padding-bottom:28px;margin-bottom:48px}
+.customer-home .planner-intro h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,6vw,82px);font-weight:400;line-height:.95;letter-spacing:-3px;margin:0}
+.customer-home .planner-intro p{grid-column:2;max-width:560px;color:#666;font-size:14px;line-height:1.9;margin:0}
+.customer-home .planner-wrap{display:grid;grid-template-columns:1fr 330px;gap:60px;align-items:start}
+.customer-home .planner-steps{border-top:1px solid #111}
+.customer-home .planner-step{display:grid;grid-template-columns:55px 180px 1fr;gap:18px;align-items:start;padding:27px 0;border-bottom:1px solid #d9d9d4}
+.customer-home .planner-step>small{font-family:Georgia,serif;font-size:18px;color:#777}
+.customer-home .planner-step>b{font-size:10px;letter-spacing:2px;padding-top:6px}
+.customer-home .planner-options{display:flex;flex-wrap:wrap;gap:7px}
+.customer-home .planner-options button{border:1px solid #cfcfca;background:transparent;color:#444;border-radius:0;padding:9px 13px;font-size:12px;transition:.25s}
+.customer-home .planner-options button:hover{border-color:#111}
+.customer-home .planner-options button.active{background:#111;color:#fff;border-color:#111}
+.customer-home .guest-control{display:flex;align-items:center;gap:16px}
+.customer-home .guest-control button{width:34px;height:34px;border:1px solid #111;background:transparent;border-radius:50%;font-size:18px;line-height:1}
+.customer-home .guest-control strong{font-family:Georgia,serif;font-size:34px;font-weight:400;min-width:65px}
+.customer-home .guest-control span{font-size:9px;letter-spacing:2px;color:#777}
+.customer-home .planner-summary{position:sticky;top:100px;background:#111;color:#fff;padding:30px;min-height:360px;display:flex;flex-direction:column;align-items:flex-start}
+.customer-home .planner-summary>span{font-size:9px;letter-spacing:3px;color:#aaa}
+.customer-home .planner-summary>strong{font-family:Georgia,serif;font-size:40px;font-weight:400;margin:25px 0 35px}
+.customer-home .planner-summary>div{width:100%;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #333;padding:13px 0}
+.customer-home .planner-summary>div b{font-family:Georgia,serif;font-size:22px;font-weight:400}
+.customer-home .planner-summary>div small{font-size:8px;letter-spacing:2px;color:#aaa}
+.customer-home .planner-summary p{font-size:11px;color:#aaa;margin:16px 0}
+.customer-home .planner-summary>button{margin-top:auto;width:100%;border:1px solid #fff;background:#fff;color:#111;border-radius:0;padding:13px 15px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:11px}
+.customer-home.mono-black .event-planner-section{background:#111!important;color:#f5f5f2!important}
+.customer-home.mono-black .planner-intro{border-color:#f5f5f2}
+.customer-home.mono-black .planner-step{border-color:#383838}
+.customer-home.mono-black .planner-options button{border-color:#555;color:#ccc}
+.customer-home.mono-black .planner-options button.active{background:#f5f5f2;color:#111;border-color:#f5f5f2}
+.customer-home.mono-black .guest-control button{border-color:#f5f5f2;color:#f5f5f2}
+.customer-home.mono-black .planner-summary{background:#f5f5f2;color:#111}
+.customer-home.mono-black .planner-summary>span,.customer-home.mono-black .planner-summary>div small,.customer-home.mono-black .planner-summary p{color:#666}
+.customer-home.mono-black .planner-summary>div{border-color:#ddd}
+.customer-home.mono-black .planner-summary>button{background:#111;color:#fff;border-color:#111}
+@media(max-width:800px){
+ .customer-home .event-planner-section{padding-top:75px;padding-bottom:75px}
+ .customer-home .planner-intro{grid-template-columns:1fr;gap:18px;margin-bottom:30px}
+ .customer-home .planner-intro p{grid-column:auto}
+ .customer-home .planner-wrap{grid-template-columns:1fr;gap:28px}
+ .customer-home .planner-summary{position:relative;top:auto;min-height:0}
+ .customer-home .planner-step{grid-template-columns:40px 1fr;gap:10px}
+ .customer-home .planner-step>.planner-options,.customer-home .planner-step>.guest-control{grid-column:2}
+}
