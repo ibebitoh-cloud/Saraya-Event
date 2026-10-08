@@ -30,10 +30,10 @@ const eventPhotoSets=[
  ]
 ];
 const modelSets=[
- ['https://cdn.3dassets.dev/assets/35232/v1/model.glb','https://cdn.3dassets.dev/assets/39391/v1/model.glb','HALL','WEDDING SEATING'],
- ['https://cdn.3dassets.dev/assets/35232/v1/model.glb','https://cdn.3dassets.dev/assets/39391/v1/model.glb','EDITORIAL HALL','TABLE DETAIL'],
- ['https://cdn.3dassets.dev/assets/35232/v1/model.glb','https://cdn.3dassets.dev/assets/39391/v1/model.glb','LIVE STAGE','LIGHTING DETAIL'],
- ['https://cdn.3dassets.dev/assets/35232/v1/model.glb','https://cdn.3dassets.dev/assets/39391/v1/model.glb','PARTY HALL','CELEBRATION DETAIL']
+ ['https://cdn.3dassets.dev/assets/35232/v1/model.glb','https://cdn.3dassets.dev/assets/35202/v1/model.glb','LUXURY HALL','TABLE TROLLEY'],
+ ['https://cdn.3dassets.dev/assets/39413/v1/model.glb','https://cdn.3dassets.dev/assets/39377/v1/model.glb','WEDDING CHAPEL','CEREMONY DAIS'],
+ ['https://cdn.3dassets.dev/assets/33938/v1/model.glb','https://cdn.3dassets.dev/assets/35925/v1/model.glb','LIVE FESTIVAL','THEATRE STAGE'],
+ ['https://cdn.3dassets.dev/assets/35925/v1/model.glb','https://cdn.3dassets.dev/assets/39375/v1/model.glb','PARTY THEATRE','CHAPEL STEEPLE']
 ];
 const services=[['VENUES','القاعات والأماكن','اختيار وتنسيق المساحة المناسبة حسب عدد الضيوف وطبيعة المناسبة.'],['CELEBRATIONS','الأفراح والخطوبات','تجهيز تجربة كاملة من دخول الضيوف حتى نهاية الاحتفال.'],['HOSPITALITY','الضيافة والبوفيه','تنسيق الطعام والضيافة وخدمة الطاولات بما يناسب شكل الحدث.'],['PRODUCTION','الصوت والإضاءة والتصوير','دعم بصري وسمعي وتصويري يجعل اللحظة قابلة للتذكر.'],['CORPORATE','الفعاليات الرسمية','مؤتمرات واجتماعات واحتفالات شركات بتشغيل دقيق.'],['PRIVATE','أعياد الميلاد والمناسبات الخاصة','مرونة في الديكور والكيك والضيافة والبرنامج.']];
 const history=[['2016','البداية','بدأت السرايا برؤية واضحة لتقديم مكان وتجربة منظمة للمناسبات، مع الاهتمام بالتفاصيل التي يلمسها العميل.'],['2018','توسع الخدمات','تطورت التجربة من المكان إلى منظومة خدمات تشمل التجهيز والضيافة والديكور والصوت والإضاءة والتنسيق.'],['2021','خبرة تشغيلية','أصبح التخطيط المسبق وجداول التشغيل ومتابعة التفاصيل جزءًا أساسيًا من طريقة العمل.'],['2024','تنوع أكبر','امتدت الخبرة لتخدم الأفراح والخطوبات وأعياد الميلاد والفعاليات الرسمية والاجتماعات.'],['2026','السرايا اليوم','بعد أكثر من 10 سنوات من العمل والتطور، تجمع السرايا المكان والخدمة والتنسيق والتشغيل في تجربة واحدة.']];
