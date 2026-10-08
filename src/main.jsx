@@ -2,6 +2,7 @@ import React,{useMemo,useState}from'react';
 import{createRoot}from'react-dom/client';
 import{CalendarDays,Users,WalletCards,Receipt,Plus,Search,LayoutDashboard,Settings,Bell,Clock3,CheckCircle2,X,MoreHorizontal,Banknote,Building2,ChevronLeft,ChevronRight,Trash2,Edit3,FileText,TrendingUp,MinusCircle,Menu,Download,Eye,Heart,Utensils,CakeSlice,BriefcaseBusiness,Camera,LogIn,ArrowLeft,UserRound,ShieldCheck}from'lucide-react';
 import'./styles.css';
+import CustomerHome from './customerHome';
 
 const initialBookings=[
 {id:1,client:'أحمد محمد',phone:'01000000000',type:'فرح',date:'2026-10-10',start:'19:00',end:'01:00',venue:'القاعة الرئيسية',status:'مؤكد',total:85000,paid:30000,services:['دي جي','تصوير']},
