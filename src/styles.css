@@ -354,3 +354,30 @@
  .customer-home .model-stage{grid-template-columns:1fr!important}
  .customer-home .model-card.large,.customer-home .model-stack .model-card{height:430px!important}
 }
+
+/* Final hero art direction: real photography, editorial composition, no synthetic hero object */
+.customer-home .customer-hero{position:relative;background:#f5f4ef!important;color:#111;min-height:100svh}
+.customer-home .hero-atmosphere{position:absolute!important;inset:0!important;overflow:hidden;background:#f5f4ef!important}
+.customer-home .hero-photo{position:absolute;inset:8% 5% 7% 42%;overflow:hidden;background:#ddd;z-index:1;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%,0 8%)}
+.customer-home .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.08);transform:scale(1.04);animation:sarayaHeroPhoto 16s ease-in-out infinite alternate}
+.customer-home .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 28%),linear-gradient(180deg,transparent 55%,rgba(0,0,0,.38));pointer-events:none}
+@keyframes sarayaHeroPhoto{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.1) translate3d(-1.5%,-1%,0)}}
+.customer-home .hero-object{display:none!important}
+.customer-home .hero-atmosphere:after{content:"";position:absolute;z-index:2;inset:8% 5% 7% 42%;border:1px solid rgba(17,17,17,.28);clip-path:polygon(8% 0,100% 0,100% 100%,0 100%,0 8%);pointer-events:none;transform:none!important;background:none!important}
+.customer-home .hero-copy{z-index:5!important;top:25%!important;left:7vw!important;max-width:610px!important}
+.customer-home .hero-copy h1{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(52px,6.5vw,96px)!important;line-height:.92!important;font-weight:400!important;letter-spacing:-4px!important}
+.customer-home .hero-copy>p{max-width:430px!important}
+.customer-home .scene-buttons{max-width:470px}
+.customer-home .layout-switcher{z-index:8!important}
+@media(max-width:900px){
+ .customer-home .hero-photo{inset:14% 5% 13% 25%;clip-path:polygon(6% 0,100% 0,100% 100%,0 100%,0 6%)}
+ .customer-home .hero-atmosphere:after{inset:14% 5% 13% 25%;clip-path:polygon(6% 0,100% 0,100% 100%,0 100%,0 6%)}
+ .customer-home .hero-copy{top:21%!important;left:6vw!important;right:8vw!important}
+}
+@media(max-width:600px){
+ .customer-home .hero-photo{inset:38% 5% 10% 18%;filter:none}
+ .customer-home .hero-atmosphere:after{inset:38% 5% 10% 18%}
+ .customer-home .hero-copy{top:18%!important;left:6vw!important;right:6vw!important}
+ .customer-home .hero-copy h1{font-size:46px!important}
+ .customer-home .hero-copy>p{max-width:310px!important}
+}
