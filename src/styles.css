@@ -214,3 +214,82 @@
  .customer-home.layout-2 .customer-hero{min-height:760px}.customer-home.layout-2 .hero-copy{left:6vw;right:6vw;top:20%;max-width:none}.customer-home.layout-2 .hero-copy h1{font-size:40px}.customer-home.layout-2 .hero-object{width:190px;height:190px;bottom:9%;right:4%}.customer-home.layout-2 .hero-index{left:auto;right:0}.customer-home.layout-2 .customer-service-grid{grid-template-columns:1fr}.customer-home.layout-2 .customer-service-grid button:nth-child(odd){transform:none}.customer-home.layout-2 .venue-motion{height:350px}
  .customer-home.layout-3 .hero-copy{top:18%;left:5vw;right:5vw}.customer-home.layout-3 .hero-copy h1{font-size:39px}.customer-home.layout-3 .hero-object{width:140px;height:140px;bottom:11%}.customer-home.layout-3 .layout-switcher{bottom:24px}.customer-home.layout-3 .layout-switcher button{width:43px;height:43px}.customer-home.layout-3 .scroll-cue{bottom:90px}
 }
+
+
+/* SARAYA — restrained luxury art direction */
+.customer-home{--ink:#111;--paper:#f7f7f5;--line:#d9d9d4;--muted:#696963;--serif:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink)}
+.customer-home .customer-hero{background:var(--paper)!important;color:var(--ink);min-height:100svh;border-bottom:1px solid var(--ink);overflow:hidden}
+.customer-home .hero-atmosphere{inset:0!important;background:var(--paper)!important;opacity:1}
+.customer-home .hero-light,.customer-home .hero-floor,.customer-home .hero-columns,.customer-home .hero-object:before,.customer-home .hero-object:after{display:none!important}
+.customer-home .hero-atmosphere:after{content:"";position:absolute;inset:9% 5% 7% 43%;border:1px solid var(--line);background:linear-gradient(115deg,transparent 0 48%,#000 48% 48.25%,transparent 48.25%);transform:skewX(-8deg);opacity:.75}
+.customer-home .hero-object{display:grid!important;place-items:center;position:absolute;left:auto;right:9vw;bottom:10%;width:min(34vw,500px)!important;height:min(58vh,600px)!important;border-radius:0!important;background:#111!important;color:#fff;box-shadow:none!important;border:0!important;animation:none!important;transform:translateZ(0)!important}
+.customer-home .hero-object svg{width:72px;height:72px;stroke-width:1}
+.customer-home .hero-copy{top:28%!important;left:7vw!important;right:auto!important;max-width:680px!important;color:var(--ink);text-shadow:none!important;transform:none!important}
+.customer-home .hero-kicker{color:#777!important;letter-spacing:4px;font-size:9px}
+.customer-home .hero-index{color:#111}
+.customer-home .hero-index b{font-family:var(--serif);font-size:34px;font-weight:400}
+.customer-home .scene-label{display:block;color:#777!important;letter-spacing:3px;font-size:10px;margin-top:26px}
+.customer-home .hero-copy h1{font-family:var(--serif)!important;font-size:clamp(55px,7vw,105px)!important;font-weight:400!important;letter-spacing:-4px!important;line-height:.9!important;max-width:700px}
+.customer-home .hero-copy>p{color:#555!important;max-width:470px;font-size:14px;line-height:1.9}
+.customer-home .scene-buttons{border-top:1px solid var(--line);padding-top:16px;gap:6px}
+.customer-home .scene-buttons button{background:transparent!important;color:#777!important;border:0!important;border-bottom:1px solid transparent!important;border-radius:0!important;padding:7px 3px}
+.customer-home .scene-buttons button.active{color:#111!important;border-bottom-color:#111!important}
+.customer-home .book-hero{background:#111!important;color:#fff!important;border-radius:0!important;padding:14px 24px}
+.customer-home .explore-hero{color:#111!important;border-color:#bbb!important;border-radius:0!important}
+.customer-home .customer-nav{background:transparent!important;color:#111;box-shadow:none}
+.customer-home .customer-logo{color:#111!important}
+.customer-home .customer-logo>b{background:#111!important;color:#fff!important;border-radius:0!important}
+.customer-home .customer-logo small{color:#777}
+.customer-home .customer-nav nav button{color:#444!important}
+.customer-home .staff-link{border-color:#111!important;color:#111!important;border-radius:0!important;background:transparent}
+.customer-home .mono-toggle{height:34px;border:1px solid #111;background:transparent;color:#111;display:inline-flex;align-items:center;gap:8px;padding:0 10px;border-radius:0;font-size:8px;letter-spacing:2px}
+.customer-home .mono-toggle i{width:12px;height:12px;border-radius:50%;background:#fff;border:1px solid #111;display:block}
+.customer-home .layout-switcher{background:#fff!important;border:1px solid #111!important;border-radius:0!important;box-shadow:none!important;color:#111!important}
+.customer-home .layout-switcher button{background:#fff!important;color:#111!important;border:0!important;border-right:1px solid #ddd!important;border-radius:0!important}
+.customer-home .layout-switcher button.active{background:#111!important;color:#fff!important}
+.customer-home .scroll-cue{color:#555}
+.customer-home .scroll-cue svg{animation:none}
+.customer-home .customer-section{border-bottom:1px solid var(--line);border-radius:0!important}
+.customer-home .section-kicker{color:#777!important;letter-spacing:3px}
+.customer-home .section-head h2,.customer-home .dark-customer h2{font-family:var(--serif);font-weight:400;letter-spacing:-2px}
+.customer-home .venue-motion{border-radius:0!important;background:#111!important;box-shadow:none}
+.customer-home .photo-gallery-section,.customer-home .venue-experience,.customer-home .process-customer,.customer-home .story-customer{background:var(--paper)!important;color:var(--ink)!important}
+.customer-home .photo-tile{border-radius:0!important;box-shadow:none!important}
+.customer-home .photo-tile:after{background:linear-gradient(180deg,transparent 45%,#000b 100%)}
+.customer-home .photo-tile:hover{transform:translateY(-5px)!important}
+.customer-home .model-studio-section{background:#111!important;border-top:1px solid #111}
+.customer-home .model-card{border-radius:0!important;box-shadow:none!important;background:#181818!important}
+.customer-home .model-card:hover{transform:none!important}
+.customer-home .model-badge{border-radius:0;background:#111;color:#fff}
+.customer-home .model-caption{border-radius:0;background:#111;color:#fff}
+.customer-home .model-specs span{border-radius:0;background:#111;border-color:#444}
+.customer-home .customer-service-grid button{border-radius:0!important;box-shadow:none!important}
+.customer-home .journey button{border-radius:0!important}
+.customer-home .history-rail article{border-radius:0!important}
+.customer-home .customer-contact{border-top:1px solid var(--ink);background:#111!important;color:#fff}
+.customer-home .customer-footer{border-radius:0!important;background:#111!important}
+.customer-home.mono-black{--paper:#111;--ink:#f5f5f2;--line:#383838;--muted:#aaa;background:#111;color:#f5f5f2}
+.customer-home.mono-black .customer-hero{background:#111!important;color:#f5f5f2;border-color:#444}
+.customer-home.mono-black .hero-atmosphere{background:#111!important}
+.customer-home.mono-black .hero-atmosphere:after{border-color:#444;background:linear-gradient(115deg,transparent 0 48%,#fff 48% 48.25%,transparent 48.25%)}
+.customer-home.mono-black .hero-object{background:#f5f5f2!important;color:#111}
+.customer-home.mono-black .customer-logo,.customer-home.mono-black .customer-nav nav button,.customer-home.mono-black .staff-link,.customer-home.mono-black .hero-index{color:#f5f5f2!important}
+.customer-home.mono-black .customer-logo>b{background:#f5f5f2!important;color:#111!important}
+.customer-home.mono-black .mono-toggle{border-color:#f5f5f2;color:#f5f5f2}
+.customer-home.mono-black .mono-toggle i{background:#111;border-color:#f5f5f2}
+.customer-home.mono-black .layout-switcher{background:#111!important;border-color:#f5f5f2!important;color:#f5f5f2!important}
+.customer-home.mono-black .layout-switcher button{background:#111!important;color:#f5f5f2!important;border-color:#333!important}
+.customer-home.mono-black .layout-switcher button.active{background:#f5f5f2!important;color:#111!important}
+.customer-home.mono-black .book-hero{background:#f5f5f2!important;color:#111!important}
+.customer-home.mono-black .explore-hero{background:transparent;color:#f5f5f2!important;border-color:#555!important}
+.customer-home.mono-black .scene-buttons button,.customer-home.mono-black .scene-buttons button.active{color:#aaa!important;border-color:transparent!important}
+.customer-home.mono-black .scene-buttons button.active{color:#fff!important;border-bottom-color:#fff!important}
+.customer-home.mono-black .photo-gallery-section,.customer-home.mono-black .venue-experience,.customer-home.mono-black .process-customer,.customer-home.mono-black .story-customer{background:#111!important;color:#f5f5f2!important}
+.customer-home.mono-black .photo-gallery-section .section-head p,.customer-home.mono-black .section-head p{color:#aaa}
+.customer-home.mono-black .model-studio-section{background:#050505!important}
+.customer-home.mono-black .customer-service-grid button{background:#181818!important;color:#f5f5f2!important;border-color:#333!important}
+.customer-home.mono-black .customer-contact,.customer-home.mono-black .customer-footer{background:#f5f5f2!important;color:#111!important}
+.customer-home.mono-black .customer-contact button{background:#111;color:#fff;border-color:#111}
+.customer-home.mono-black .customer-footer{border-color:#111}
+@media(max-width:900px){.customer-home .hero-atmosphere:after{inset:16% 4% 12% 28%}.customer-home .hero-object{right:5vw;width:42vw!important;height:48vh!important}.customer-home .hero-copy{top:23%!important;left:6vw!important;right:6vw!important;max-width:650px!important}}
+@media(max-width:600px){.customer-home .customer-nav nav{display:none}.customer-home .customer-nav{padding:15px 18px}.customer-home .hero-atmosphere:after{inset:15% 5% 20% 12%;transform:skewX(-5deg)}.customer-home .hero-object{right:8%;bottom:8%;width:190px!important;height:260px!important}.customer-home .hero-copy{top:20%!important;left:6vw!important;right:6vw!important}.customer-home .hero-copy h1{font-size:48px!important;letter-spacing:-2px!important}.customer-home .hero-copy>p{font-size:12px;max-width:330px}.customer-home .scene-buttons{display:none}.customer-home .mono-toggle{padding:0 7px}.customer-home .staff-link{font-size:0;width:34px;padding:0}.customer-home .layout-switcher{bottom:18px}.customer-home .layout-switcher small{display:none}.customer-home .layout-switcher button{width:42px!important;height:42px!important}.customer-home .scroll-cue{bottom:75px}}
