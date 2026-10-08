@@ -3,6 +3,7 @@ import{createRoot}from'react-dom/client';
 import{CalendarDays,Users,WalletCards,Receipt,Plus,Search,LayoutDashboard,Settings,Bell,Clock3,CheckCircle2,X,MoreHorizontal,Banknote,Building2,ChevronLeft,ChevronRight,Trash2,Edit3,FileText,TrendingUp,MinusCircle,Menu,Download,Eye,Heart,Utensils,CakeSlice,BriefcaseBusiness,Camera,LogIn,ArrowLeft,UserRound,ShieldCheck}from'lucide-react';
 import'./styles.css';
 import CustomerHome from './customerHome';
+import InquiryModal from './inquiryModal';
 
 const initialBookings=[
 {id:1,client:'أحمد محمد',phone:'01000000000',type:'فرح',date:'2026-10-10',start:'19:00',end:'01:00',venue:'القاعة الرئيسية',status:'مؤكد',total:85000,paid:30000,services:['دي جي','تصوير']},
@@ -71,7 +72,7 @@ const addBooking=f=>{setBookings([...bs,{...f,id:Date.now()}]);setModal(null);no
 const editBooking=f=>{setBookings(bs.map(b=>b.id===f.id?f:b));setModal(null);notify('تم تحديث الحجز')};
 const deleteBooking=id=>{setBookings(bs.filter(b=>b.id!==id));setDetail(null);notify('تم حذف الحجز')};
 
-if(home)return <>{<Home login={()=>setLogin(true)} lang={lang} onToggleLang={toggleLang}/>} {login&&<Login close={()=>setLogin(false)} enter={n=>{setUser(n);setLogin(false);setHome(false)}}/>}</>;
+if(home)return <><CustomerHome lang={lang} onLogin={()=>setLogin(true)} onInquiry={()=>setInquiry(true)}/>{inquiry&&<InquiryModal close={()=>setInquiry(false)} lang={lang}/>} {login&&<Login close={()=>setLogin(false)} enter={n=>{setUser(n);setLogin(false);setHome(false)}}/>}</>;
 return <div className={'shell '+lang}><aside><div className="brand"><b>S</b><div><strong>SARAYA</strong><small>EVENT MANAGEMENT</small></div></div>{nav.map(([k,l,I])=><button className={a===k?'active':''} onClick={()=>setA(k)} key={k}><I/>{l}</button>)}<button className={a==='settings'?'active':''} onClick={()=>setA('settings')}><Settings/>الإعدادات</button></aside><main><header><div><small>{lang==='ar'?'إدارة القاعة والمناسبات':'Venue & Event Management'}</small><h1>{nav.find(x=>x[0]===a)?.[1]||'الإعدادات'}</h1></div><div className="header-tools"><button type="button" className="language-toggle dashboard-language" onClick={toggleLang}>{lang==='ar'?'العربية ↔ EN':'EN ↔ العربية'}</button><div className="user"><Bell/><span>{user[0]||'S'}</span></div></div></header>
 {a==='dashboard'&&<Dashboard bs={bs} paid={paid} due={due} revenue={revenue} exp={exp} profit={profit} setA={setA} openNew={()=>setModal('new')} openDetail={setDetail}/>}
 {a==='bookings'&&<Bookings filtered={filtered} q={q} setQ={setQ} openNew={()=>setModal('new')} openDetail={setDetail} edit={b=>setModal(b)} deleteBooking={deleteBooking}/>}
